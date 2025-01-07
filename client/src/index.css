@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Quicksand", sans-serif;
+    color: #254760;
+}
+
+a.active{
+    color: white !important;
+    background-color: #45a735 !important;
+}
+a.active:hover span{
+    z-index: 10;
+    color: white;
+}
+
+a.active,
+.custom-effect,
+.custom-effect2,
+.custom-effect3,
+.custom-effect-nav{
+    position: relative;
+    overflow: hidden;
+    background-color: #45a735;
+    color: white;
+    border: none;
+
+}
+.custom-effect-nav{
+    color: black;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.custom-effect2{
+    background-color: #898d4fbe;
+}
+.custom-effect3{
+    background-color: #e21f1f;
+}
+
+a.active::after,
+.custom-effect::after,
+.custom-effect2::after,
+.custom-effect3::after,
+.custom-effect-nav::after{
+    content: '';
+    background-color: #28791c;
+    position: absolute;
+    height: 103%;
+    width: 101%;
+    left: -1;
+    bottom: -103%;
+    border-radius: 90%;
+    transition: all ease .5s;
+}
+
+.custom-effect2::after{
+    background-color: #6d703bbe;
+}
+.custom-effect3::after{
+    background-color: #be0202;
+}
+
+a.active:hover::after,
+.custom-effect:hover::after,
+.custom-effect2:hover::after,
+.custom-effect3:hover::after,
+.custom-effect-nav:hover::after{
+    bottom: -1%;
+    border-radius: 0;
+}
+
+.custom-card{
+    transition: .5s;
+}
+.custom-card:hover{
+    box-shadow: 10px 8px rgba(192, 192, 192, 0.336);
+    transform: translateY(-20px);
+}
+
+.profilePhoto:hover ul{
+    display: block;
+}
+
+
+.custom-icon span{
+    transition: .2s;
+    transform: rotate(-45deg);
+}
+.custom-icon:hover span{
+    transform: rotate(0deg);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.number {
+    font-size: 80px; 
+    font-weight: bold;
+    color: transparent; 
+    -webkit-text-stroke: 1.5px #034833;
+}
